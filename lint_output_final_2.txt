@@ -1,0 +1,122 @@
+
+> oasis@0.1.0 lint
+> eslint
+
+
+C:\Users\HP\oasis\app\api\auth\login\route.ts
+  50:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\HP\oasis\app\api\auth\me\route.ts
+  14:20  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  28:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\HP\oasis\app\api\auth\register\route.ts
+  49:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\HP\oasis\app\api\chats\[chatId]\messages\route.ts
+  15:20  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  26:12  warning  'error' is defined but never used         @typescript-eslint/no-unused-vars
+  26:19  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  41:20  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  60:12  warning  'error' is defined but never used         @typescript-eslint/no-unused-vars
+  60:19  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\HP\oasis\app\api\chats\route.ts
+   4:8   warning  'User' is defined but never used          @typescript-eslint/no-unused-vars
+   6:8   warning  'mongoose' is defined but never used      @typescript-eslint/no-unused-vars
+  16:20  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  31:45  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  34:15  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  56:19  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  68:20  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  86:12  warning  'error' is defined but never used         @typescript-eslint/no-unused-vars
+  86:19  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\HP\oasis\app\api\users\search\route.ts
+  13:20  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  34:12  warning  'error' is defined but never used         @typescript-eslint/no-unused-vars
+  34:19  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\HP\oasis\app\login\page.tsx
+   4:23  warning  'useSelector' is defined but never used   @typescript-eslint/no-unused-vars
+   5:10  warning  'RootState' is defined but never used     @typescript-eslint/no-unused-vars
+  34:19  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\HP\oasis\app\page.tsx
+  19:11  warning  'sendMessage' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  19:24  warning  'emitTyping' is assigned a value but never used      @typescript-eslint/no-unused-vars
+  19:36  warning  'emitStopTyping' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  38:61  error    Unexpected any. Specify a different type             @typescript-eslint/no-explicit-any
+
+C:\Users\HP\oasis\components\SocketProvider.tsx
+  11:46  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @typescript-eslint/no-explicit-any
+  66:53  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @typescript-eslint/no-explicit-any
+  85:36  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+C:\Users\HP\oasis\components\SocketProvider.tsx:85:36
+  83 |
+  84 |   return (
+> 85 |     <SocketContext.Provider value={{ socket: socketRef.current, sendMessage, emitTyping, emitStopTyping }}>
+     |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Cannot access ref value during render
+  86 |       {children}
+  87 |     </SocketContext.Provider>
+  88 |   );  react-hooks/refs
+  85:46  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+C:\Users\HP\oasis\components\SocketProvider.tsx:85:46
+  83 |
+  84 |   return (
+> 85 |     <SocketContext.Provider value={{ socket: socketRef.current, sendMessage, emitTyping, emitStopTyping }}>
+     |                                              ^^^^^^^^^^^^^^^^^ Cannot access ref value during render
+  86 |       {children}
+  87 |     </SocketContext.Provider>
+  88 |   );                                             react-hooks/refs
+
+C:\Users\HP\oasis\components\call\CallModal.tsx
+   4:34  warning  'VideoOff' is defined but never used      @typescript-eslint/no-unused-vars
+   4:49  warning  'MicOff' is defined but never used        @typescript-eslint/no-unused-vars
+   5:10  warning  'cn' is defined but never used            @typescript-eslint/no-unused-vars
+   5:14  warning  'goldGradient' is defined but never used  @typescript-eslint/no-unused-vars
+  44:55  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  57:61  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\HP\oasis\components\chat\ChatArea.tsx
+   7:35  warning  'setChats' is defined but never used                 @typescript-eslint/no-unused-vars
+  11:3   warning  'Phone' is defined but never used                    @typescript-eslint/no-unused-vars
+  28:54  warning  'onStartCall' is defined but never used              @typescript-eslint/no-unused-vars
+  41:10  warning  'loading' is assigned a value but never used         @typescript-eslint/no-unused-vars
+  43:23  warning  'setIsSearching' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  93:61  error    Unexpected any. Specify a different type             @typescript-eslint/no-explicit-any
+
+C:\Users\HP\oasis\components\layout\RightPanel.tsx
+  6:10  warning  'cn' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\HP\oasis\components\layout\Sidebar.tsx
+  13:14  warning  'goldTextGradient' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\HP\oasis\components\modals\GlobalSearchModal.tsx
+   9:10  warning  'cn' is defined but never used            @typescript-eslint/no-unused-vars
+  18:42  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\HP\oasis\hooks\useCall.ts
+  17:52  error    Unexpected any. Specify a different type          @typescript-eslint/no-explicit-any
+  19:10  warning  'idToCall' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  19:20  warning  'setIdToCall' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\HP\oasis\lib\auth.ts
+   6:36  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  13:12  warning  'error' is defined but never used         @typescript-eslint/no-unused-vars
+
+C:\Users\HP\oasis\lib\mongodb.ts
+  14:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  17:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\HP\oasis\pages\api\socket.ts
+  24:48  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+✖ 57 problems (31 errors, 26 warnings)
+

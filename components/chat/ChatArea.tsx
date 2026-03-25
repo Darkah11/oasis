@@ -8,6 +8,7 @@ import { addMessage, setMessages, setActiveChat } from '@/store/slices/chatSlice
 import { useSocket } from '@/hooks/useSocket';
 import axios from 'axios';
 import { 
+  Phone,
   Send, 
   Smile, 
   Paperclip,
@@ -21,9 +22,10 @@ import { cn } from '@/lib/utils';
 
 interface ChatAreaProps {
   toggleMobileMenu: () => void;
+  onStartCall?: () => void;
 }
 
-export default function ChatArea({ toggleMobileMenu }: ChatAreaProps) {
+export default function ChatArea({ toggleMobileMenu, onStartCall }: ChatAreaProps) {
   const activeChatId = useSelector((state: RootState) => state.chat.activeChatId);
   const chats = useSelector((state: RootState) => state.chat.chats);
   const activeChat = chats.find(c => c.id === activeChatId);
@@ -186,6 +188,13 @@ export default function ChatArea({ toggleMobileMenu }: ChatAreaProps) {
           </div>
 
           <div className="hidden md:flex items-center gap-3">
+             <button 
+               onClick={onStartCall}
+               className="p-2.5 hover:bg-zinc-800 rounded-xl text-zinc-400 transition-all"
+               title="Start Call"
+             >
+                <Phone size={20} />
+             </button>
              <button className="p-2.5 hover:bg-zinc-800 rounded-xl text-zinc-400 transition-all">
                 <Settings size={20} />
              </button>

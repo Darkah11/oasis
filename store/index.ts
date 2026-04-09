@@ -18,12 +18,18 @@ const persistConfig = {
   key: 'root',
   version: 3,
   storage,
-  whitelist: ['auth', 'ui', 'chat'], // Persist auth, ui, and chat
+  whitelist: ['auth', 'ui'],
+};
+
+const chatPersistConfig = {
+  key: 'chat',
+  storage,
+  blacklist: ['activeChatId'], // Don't persist activeChatId
 };
 
 const rootReducer = combineReducers({
   auth: authReducer,
-  chat: chatReducer,
+  chat: persistReducer(chatPersistConfig, chatReducer),
   ui: uiReducer,
 });
 

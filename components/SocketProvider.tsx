@@ -37,7 +37,7 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
       return;
     }
 
-    const socketUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+    const socketUrl = process.env.NEXT_PUBLIC_API_URL;
     
     const socketInitializer = async () => {
       try {

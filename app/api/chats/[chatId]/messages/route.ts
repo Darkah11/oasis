@@ -17,8 +17,15 @@ export async function GET(
     if (!decoded) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
     await connectDB();
+    const { searchParams } = new URL(req.url);
+    const after = searchParams.get('after');
 
-    const messages = await Message.find({ chatId })
+    const filter: any = { chatId };
+    if (after) {
+      filter.createdAt = { $gt: new Date(after) };
+    }
+
+    const messages = await Message.find(filter)
       .sort({ createdAt: 1 })
       .limit(50); // Pagination simplified
 
@@ -47,6 +54,7 @@ export async function POST(
       senderId: decoded.id,
       content,
       type: type || 'text',
+      status: 'sent',
       fileUrl,
       fileName,
     });

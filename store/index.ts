@@ -16,9 +16,9 @@ import uiReducer from './slices/uiSlice';
 
 const persistConfig = {
   key: 'root',
-  version: 2,
+  version: 3,
   storage,
-  whitelist: ['auth', 'ui'], // Persist only auth and ui for now
+  whitelist: ['auth', 'ui', 'chat'], // Persist auth, ui, and chat
 };
 
 const rootReducer = combineReducers({

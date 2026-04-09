@@ -40,6 +40,7 @@ export async function GET(req: Request) {
           name: otherParticipant?.name || 'Unknown User',
           avatar: otherParticipant?.avatar || '',
           type: chat.type,
+          participants: chat.participants,
           lastMessage: chat.lastMessage,
           unreadCount: 0,
         };
@@ -49,6 +50,7 @@ export async function GET(req: Request) {
         name: chat.name,
         avatar: chat.avatar,
         type: chat.type,
+        participants: chat.participants,
         lastMessage: chat.lastMessage,
         unreadCount: 0,
       };
